@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
-import HC_map from 'highcharts/modules/map';
-HC_map(Highcharts);
+// import HC_map from 'highcharts/modules/map';
+// HC_map(Highcharts);
 
 @Component({
   selector: 'app-test-redraw',
@@ -11,7 +11,7 @@ HC_map(Highcharts);
 export class TestRedrawComponent implements OnInit {
 
   public Highcharts: typeof Highcharts = Highcharts;
-  public chartConstructor = 'mapChart';
+  public chartConstructor = 'chart';
   public chartOptions: Highcharts.Options;
   public chartOptions1: Highcharts.Options;
   public chartOptions2: Highcharts.Options;
