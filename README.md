@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run **ng serve** for a dev server. Navigate to **http://localhost:4200/**. The app will automatically reload if you change any of the source files.
 
 ## Problem Recreation
-1. Launch Application
+1. Launch Application ![Launch](/src/assets/images/Highchart-Angular-UpdateCharts01.png?raw=true)
 2. **Right-click** page and select **Inspect**
 3. Click **Console**
 4. Click **Select Charts**
@@ -17,8 +17,7 @@ Run **ng serve** for a dev server. Navigate to **http://localhost:4200/**. The a
 8. Click in body of **Chart 1**
 9. Click **Redraw** - note the chart change
 10. Click **Select Charts**
-11. Click **Chart 2**
-12. Note error:<br>
+11. Click **Chart 2** - note the error
 ERROR Error: Uncaught (in promise): TypeError: Cannot read property 'forExport' of undefined<br>
 TypeError: Cannot read property 'forExport' of undefined<br>
     at B.destroy (highcharts.js:337)<br>
