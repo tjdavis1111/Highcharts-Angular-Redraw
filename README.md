@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run **ng serve** for a dev server. Navigate to **http://localhost:4200/**. The app will automatically reload if you change any of the source files.
 
-## Problem Recreation
+## Problem Recreation [Click to run in Stackblitz](https://stackblitz.com/github/tjdavis1111/Highcharts-Angular-Redraw)
 1. Launch Application ![Step1](/src/assets/images/Highchart-Angular-UpdateCharts01.png?raw=true)
 2. **Right-click** page and select **Inspect** ![Step2](/src/assets/images/Highchart-Angular-UpdateCharts02.png?raw=true)
 3. Click **Console** ![Step3](/src/assets/images/Highchart-Angular-UpdateCharts03.png?raw=true)
