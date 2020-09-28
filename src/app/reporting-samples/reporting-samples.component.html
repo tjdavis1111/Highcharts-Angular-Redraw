@@ -1,0 +1,49 @@
+<!-- <div class="mat-app-background basic-container">
+  <app-sidenav-backdrop-example>loading</app-sidenav-backdrop-example>
+</div> -->
+<div class="container-fluid clear-fix d-flex flex-column grow p-0 mb-0 bg-white">
+  <div class="row">
+    <mat-sidenav-container autosize fullscreen style="margin-top:0px;">
+      <mat-sidenav #sidenav mode="push" [(opened)]="opened" style="margin-top:8px;" >
+
+        <span style="margin-left: 15px; font-weight: bold;font-size:large;">Charts:</span>
+        <mat-tree #tree [dataSource]="dataSource" [treeControl]="treeControl">
+          <!-- This is the tree node template for leaf nodes -->
+          <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+            <!-- use a disabled button to provide padding for tree leaf -->
+            <!-- <button mat-icon-button disabled></button> -->
+            <a mat-menu-item [routerLink]="node.route" (click)="chartClicked(node.name, node.category)"
+              routerLinkActive="active">
+              <span style="font-weight: lighter;">
+                {{ node.name }}
+              </span>
+            </a>
+          </mat-tree-node>
+          <!-- This is the tree node template for expandable nodes -->
+          <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+            <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name"
+              (click)="categoryClicked(node.name);">
+              <mat-icon class="mat-icon-rtl-mirror">
+                {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+              </mat-icon>
+            </button>
+            <span style="font-weight: bold;">{{node.name}}</span>
+          </mat-tree-node>
+        </mat-tree>
+        <div style="min-height: 30px;"></div>
+      </mat-sidenav>
+
+      <mat-sidenav-content style="margin-top:0px;">
+        <div class="container-fluid clear-fix  p-1 mb-0 bg-white " [ngStyle]="{'height': viewPortHeight + 'px'}">
+          <!-- <mat-checkbox [(ngModel)]="opened">Charts</mat-checkbox> -->
+          <button mat-button (click)="sidenav.toggle()" style="margin-left: 66px;">Select Charts</button>
+          <router-outlet #router></router-outlet>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</div>
+
+<!-- Copyright 2020 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
